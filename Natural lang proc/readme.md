@@ -1,6 +1,7 @@
 The project is about recognizing the meaning of the dutch words with the help of vast amount of english texts as training data.
 I used nltk and regex libraries primarily.
 First I generated a language model for english and seperated the words into unigrams and bigrams.
+
 Preprocess the Text: Before training the model, we need to preprocess the text to clean it and make it suitable for language modeling. This may involve steps such as converting text to lowercase, removing punctuation, handling special characters, and handling any language-specific preprocessing tasks.
 
 Tokenization: Tokenization is the process of splitting the text into individual words or tokens. In NLTK, we can use tokenization tools such as word_tokenize or regexp_tokenize to tokenize the text. For languages like French, which may have different tokenization rules compared to English, we may need to customize the tokenization process accordingly.
