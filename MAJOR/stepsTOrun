@@ -1,0 +1,9 @@
+Steps to run the code:
+
+1.	First download all the libraries in the system mentioned in the notebook file (yelp_test.ipynb). 
+2.	You can have any environment such as jupyter notebook or VS code to run the code.
+3.	Next put the dataset (yelp.csv) in the same folder as the script file.
+4.	Run each part of the notebook and run all the parts until the testing is done.
+5.	Next, open yelp_api.py and run the script after downloading all the necessary libraries.
+6.	The terminal will suggest a url which you need to copy paste on browser.
+7.	Then enter any text for the final output.
