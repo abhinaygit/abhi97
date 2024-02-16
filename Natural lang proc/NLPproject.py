@@ -21,6 +21,7 @@ def generateLanguageModel(lang):
     file.close()
     return languageModel
 
+
 #This is for processing the data files created. This function should be called for each file
 #Hash of Hash will be updated automatically
 
