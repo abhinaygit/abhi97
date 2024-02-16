@@ -5,3 +5,6 @@
 • Used Pandas module to describe the dataset and understand the major patterns.
 
 • Significant improvement in F1-score was obtained. 
+
+# The initial dataset is too large to upload here. 
+https://datahub.io/machine-learning/creditcard
