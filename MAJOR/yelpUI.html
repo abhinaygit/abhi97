@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Input</title>
+</head>
+<body>
+	<label for="input">Enter text:</label>
+	<input type="text" id="input">
+	<button onclick="submit()">Submit</button>
+	<p id="output"></p>
+	
+	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+	<script>
+		
+		const backend_url = "http://127.0.0.1:5000/"
+		function submit() {
+			var input = document.getElementById("input").value;
+			console.log(input)
+			// var xhr = new XMLHttpRequest();
+			// xhr.open("GET", backend_url, true);
+			// xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
+			// xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+			// xhr.setRequestHeader("Content-Type", "application/json");
+			// xhr.onreadystatechange = function() {
+			// 	if (xhr.readyState === 4 && xhr.status === 200) {
+			// 		var response = JSON.parse(xhr.responseText);
+			// 		console.log('resp',response)
+			// 		//document.getElementById("output").innerHTML = response.category;
+			// 	}
+			// };
+			// var data = JSON.stringify({text: input});
+			// xhr.send(data);
+			$.ajax({
+          url: backend_url,
+          type: 'GET',
+          dataType: 'jsonp',
+          cors: true ,
+          contentType:'application/json',
+		  async: true,
+          secure: true,
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+          success: function (data){
+			  console.log('in success')
+            console.log('data',data);
+            
+          },
+		  error:function(err){
+			console.log(err)  
+		  }
+      })
+		}
+	</script>
+</body>
+</html>
